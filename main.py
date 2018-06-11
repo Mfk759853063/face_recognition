@@ -76,9 +76,9 @@ class Face(object):
         if results[0] == 1:
             self.flags["find"] = True
             self.flags["name"] = self.people_labels[index]
-            print("系统识别到此人,%s花了%.2f秒，当前worker名字%s" % (self.people_labels[index],(end_time - start_time)%60,multiprocessing.current_process().name))
+            print("系统识别到此人,%s花了%f秒，当前worker名字%s" % (self.people_labels[index],(end_time - start_time)%60,multiprocessing.current_process().name))
         else:
-            print("系统未识别到,%s花了%.2f秒，当前worker名字%s" % (self.people_labels[index], (end_time - start_time) % 60, multiprocessing.current_process().name))
+            print("系统未识别到,%s花了%f秒，当前worker名字%s" % (self.people_labels[index], (end_time - start_time) % 60, multiprocessing.current_process().name))
 
     def setup(self):
         print("加载中...")
